@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+   <!-- <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="#00A0FA"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/tool"
+            android:textAlignment="center"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>-->
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/sad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/auct_desc_img"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="250dp"
+                android:layout_margin="20dp">
+            </ImageView>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/auct_item_name"
+                android:textSize="20dp"
+                android:layout_marginLeft="22dp"
+                android:layout_below="@+id/auct_desc_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product_name"
+                >
+
+            </TextView>
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/auct_item_name"
+                android:layout_marginLeft="22dp"
+                android:id="@+id/auct_item_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product_des">
+
+            </TextView>
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/auct_item_des"
+                android:layout_marginLeft="22dp"
+                android:id="@+id/bid_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bid Starts On">
+            </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sad">
+                <Button
+                    android:id="@+id/bidders_list"
+                    android:text="Bidders list"
+                    android:layout_width="150dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/rectage2"
+                    >
+                </Button>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/total_price"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Total Price :"
+                    android:layout_alignParentLeft="true"
+                    >
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

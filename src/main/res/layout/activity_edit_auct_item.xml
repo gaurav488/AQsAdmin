@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/edit_auct_img"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:layout_margin="3dp"
+                        android:id="@+id/edit_imageView"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        android:maxHeight="250dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pic">
+                    </ImageView>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/imgbtnid"
+                android:layout_below="@+id/edit_auct_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/edit_btnchoose"
+                    android:background="@drawable/rectage2"
+                    android:layout_centerInParent="true"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Choose Item Image" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/imgbtnid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/edit_item_name"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:inputType="textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Item Name"/>
+                    <EditText
+                        android:id="@+id/edit_item_desc"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:inputType="textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Item Description">
+                    </EditText>
+                    <EditText
+                        android:drawableLeft="@drawable/rupee"
+                        android:id="@+id/edit_item_strt_amt"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Bid Start Amount">
+                    </EditText>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Estimated Bid ammount :"
+                            android:textSize="15dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp">
+
+                        </TextView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:drawableLeft="@drawable/rupee"
+                                android:id="@+id/edit_item_estimate_strt_amt"
+                                android:layout_marginEnd="2dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:textSize="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Start Amount"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="2dp">
+                            </EditText>
+                            <EditText
+                                android:drawableLeft="@drawable/rupee"
+                                android:id="@+id/edit_item_estimate_end_amt"
+                                android:layout_marginEnd="2dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:textSize="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="End Ammount"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginLeft="20dp">
+                            </EditText>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <Button
+                                android:id="@+id/edit_pick_date"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/rectage2"
+                                android:layout_height="wrap_content"
+                                android:text="Pick date"
+                                android:layout_marginLeft="20dp" />
+                            <TextView
+                                android:id="@+id/edit_Date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="Date"
+                                android:textSize="15dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="40dp">
+                            </TextView>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+                            <Button
+                                android:id="@+id/edit_pick_time"
+                                android:background="@drawable/rectage2"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="End Time "
+                                android:layout_marginLeft="20dp" />
+                            <TextView
+                                android:id="@+id/edit_pick_end_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="time"
+                                android:textSize="15dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="40dp">
+                            </TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/edit_creatauc"
+                        android:layout_width="match_parent"
+                        android:text="Save changes"
+                        android:background="@drawable/rectage2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content">
+                    </Button>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

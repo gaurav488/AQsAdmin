@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@drawable/gradient"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/tool2"
+            android:textAlignment="center"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/past_auct_desc_img"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="250dp"
+                android:layout_margin="20dp">
+            </ImageView>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/past_auct_item_name"
+                android:textSize="20dp"
+                android:layout_marginLeft="22dp"
+                android:layout_below="@+id/past_auct_desc_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product_name"
+                >
+
+            </TextView>
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/past_auct_item_name"
+                android:layout_marginLeft="22dp"
+                android:id="@+id/past_auct_item_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product_des">
+
+            </TextView>
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/past_auct_item_des"
+                android:layout_marginLeft="22dp"
+                android:id="@+id/past_bid_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bid Starts On">
+
+            </TextView>
+
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/past_bid_end_date"
+                android:layout_marginLeft="22dp"
+                android:id="@+id/past_estimated_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="estimated bid">
+
+            </TextView>
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/winner"
+        android:text="Winner"
+        android:layout_width="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/rectage2"
+        >
+    </Button>
+
+</RelativeLayout>
